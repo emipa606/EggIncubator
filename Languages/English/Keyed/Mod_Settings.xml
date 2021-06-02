@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <EI.increasespeed.label>Industrial incubators decrease incubation time</EI.increasespeed.label>
+  <EI.increasespeed.tooltip>Will cause the incubation-time to be halved when using the industrial incubator</EI.increasespeed.tooltip>
+  <EI.version.label>Installed mod-version: {0}</EI.version.label>
+</LanguageData>
