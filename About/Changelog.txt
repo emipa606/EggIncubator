@@ -1,4 +1,7 @@
 # Changelog for EggIncubator
 
+1.0.1.0 - Added chinese translation, thanks HawnHan!
+
+
 1.0.0.0 - First publish
 

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <Basic_EggIncubator.label>基础孵蛋器</Basic_EggIncubator.label>
+  <Basic_EggIncubator.description>可将蛋保持在适宜的孵化温度</Basic_EggIncubator.description>
+  <Basic_EggIncubator_Blueprint.label>基础孵蛋器(蓝图)</Basic_EggIncubator_Blueprint.label>
+  <Basic_EggIncubator_Frame.label>基础孵蛋器(建造中)</Basic_EggIncubator_Frame.label>
+  <Basic_EggIncubator_Frame.description>可将蛋保持在适宜的孵化温度</Basic_EggIncubator_Frame.description>
+  <Normal_EggIncubator.label>工业孵蛋器</Normal_EggIncubator.label>
+  <Normal_EggIncubator.description>可将蛋保持在适宜的孵化温度</Normal_EggIncubator.description>
+  <Normal_EggIncubator_Blueprint.label>工业孵蛋器(蓝图)</Normal_EggIncubator_Blueprint.label>
+  <Normal_EggIncubator_Frame.label>工业孵蛋器(建造中)</Normal_EggIncubator_Frame.label>
+  <Normal_EggIncubator_Frame.description>可将蛋保持在适宜的孵化温度</Normal_EggIncubator_Frame.description>
+</LanguageData>

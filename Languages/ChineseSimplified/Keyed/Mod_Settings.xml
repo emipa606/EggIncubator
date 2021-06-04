@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <EI.increasespeed.label>工业孵蛋器可减少孵化时间</EI.increasespeed.label>
+  <EI.increasespeed.tooltip>使用工业孵蛋器将减少一半孵化时间</EI.increasespeed.tooltip>
+  <EI.version.label>已安装的Mod版本: {0}</EI.version.label>
+</LanguageData>
