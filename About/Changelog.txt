@@ -1,5 +1,8 @@
 # Changelog for EggIncubator
 
+1.0.2.0 - Updated graphics
+
+
 1.0.1.0 - Added chinese translation, thanks HawnHan!
 
 

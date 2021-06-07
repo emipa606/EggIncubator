@@ -16,6 +16,16 @@ There is a mod-option for making the industrial incubator speed up the incubatio
 
 Idea by: Psyra
 Graphics by: Delta
+Chinese translation:HawnHan
+
+[table]
+	[tr]
+		[td]https://invite.gg/Mlie]![Image](https://i.imgur.com/zdzzBrc.png)
+[/td]
+		[td]https://github.com/emipa606/EggIncubator]![Image](https://i.imgur.com/kTkpTOE.png)
+[/td]
+	[/tr]
+[/table]
 
 ![Image](https://i.imgur.com/Rs6T6cr.png)
 
