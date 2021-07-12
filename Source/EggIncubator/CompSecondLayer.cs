@@ -15,7 +15,7 @@ namespace EggIncubator
 
         // Token: 0x17000002 RID: 2
         // (get) Token: 0x06000002 RID: 2 RVA: 0x00002070 File Offset: 0x00000270
-        protected virtual Graphic Graphic
+        private Graphic Graphic
         {
             get
             {
@@ -41,6 +41,7 @@ namespace EggIncubator
         public override void PostDraw()
         {
             base.PostDraw();
+            Log.Message($"Drawing cover for {parent}");
             Graphic.Draw(GenThing.TrueCenter(parent.Position, parent.Rotation, parent.def.size, Props.Altitude),
                 parent.Rotation, parent);
         }

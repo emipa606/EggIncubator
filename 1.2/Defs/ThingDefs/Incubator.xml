@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef Name="IncubatorBasic" Abstract="True" ParentName="BuildingBase">
+    <thingClass>Building_Storage</thingClass>
+    <category>Building</category>
+    <selectable>true</selectable>
+    <tradeTags>
+      <li>Furniture</li>
+    </tradeTags>
+    <description>Will keep the eggs at the right temperature</description>
+    <size>1,1</size>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <repairEffect>Repair</repairEffect>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <passability>PassThroughOnly</passability>
+    <filthLeaving>Filth_RubbleBuilding</filthLeaving>
+    <altitudeLayer>Building</altitudeLayer>
+    <fillPercent>0.50</fillPercent>
+    <surfaceType>Item</surfaceType>
+    <pathCost>70</pathCost>
+    <designationCategory>Production</designationCategory>
+    <building>
+      <preventDeteriorationOnTop>true</preventDeteriorationOnTop>
+      <preventDeteriorationInside>true</preventDeteriorationInside>
+      <ignoreStoredThingsBeauty>true</ignoreStoredThingsBeauty>
+      <fixedStorageSettings>
+        <filter>
+          <categories>
+            <li>EggsFertilized</li>
+          </categories>
+          <specialFiltersToDisallow>
+            <li>AllowRotten</li>
+          </specialFiltersToDisallow>
+        </filter>
+      </fixedStorageSettings>
+      <defaultStorageSettings>
+        <priority>Important</priority>
+        <filter>
+          <categories>
+            <li>EggsFertilized</li>
+          </categories>
+        </filter>
+      </defaultStorageSettings>
+    </building>
+    <inspectorTabs>
+      <li>ITab_Storage</li>
+    </inspectorTabs>
+    <canOverlapZones>false</canOverlapZones>
+  </ThingDef>
+  <ThingDef ParentName="IncubatorBasic">
+    <defName>Basic_EggIncubator</defName>
+    <label>basic egg incubator</label>
+    <graphicData>
+      <texPath>BasicIncubator</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(1,1)</drawSize>
+      <drawRotated>false</drawRotated>
+      <allowFlip>false</allowFlip>
+      <shadowData>
+        <volume>(0.9,0.3,0.9)</volume>
+      </shadowData>
+      <damageData>
+        <rect>(0.2,0,0.6,0.1)</rect>
+      </damageData>
+    </graphicData>
+    <uiIconPath>BasicIncubator_UI</uiIconPath>
+    <soundImpactDefault>BulletImpact_Ground</soundImpactDefault>
+    <tickerType>Normal</tickerType>
+    <costList>
+      <WoodLog>50</WoodLog>
+    </costList>
+    <constructEffect>ConstructDirt</constructEffect>
+    <statBases>
+      <WorkToBuild>300</WorkToBuild>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Mass>10</Mass>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <rotatable>false</rotatable>
+    <comps>
+      <li Class="CompProperties_HeatPusher">
+        <compClass>CompHeatPusherPowered</compClass>
+        <heatPerSecond>0.5</heatPerSecond>
+      </li>
+      <li Class="CompProperties_Refuelable">
+        <fuelConsumptionRate>10.0</fuelConsumptionRate>
+        <fuelCapacity>50.0</fuelCapacity>
+        <fuelFilter>
+          <thingDefs>
+            <li>WoodLog</li>
+          </thingDefs>
+        </fuelFilter>
+        <initialFuelPercent>1</initialFuelPercent>
+        <showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+      </li>
+      <li Class="EggIncubator.CompProperties_SecondLayer">
+        <graphicData>
+          <texPath>BasicIncubatorLid</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+          <shaderType>Transparent</shaderType>
+          <drawSize>(1,1)</drawSize>
+        </graphicData>
+        <altitudeLayer>MoteOverhead</altitudeLayer>
+      </li>
+    </comps>
+    <researchPrerequisites>
+      <li>PassiveCooler</li>
+    </researchPrerequisites>
+  </ThingDef>
+  <ThingDef ParentName="IncubatorBasic">
+    <defName>Normal_EggIncubator</defName>
+    <label>industrial egg incubator</label>
+    <uiIconPath>Incubator_UI</uiIconPath>
+    <graphicData>
+      <texPath>Incubator/Incubator</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(2,2)</drawSize>
+      <shadowData>
+        <volume>(0.8,0.3,0.8)</volume>
+      </shadowData>
+      <damageData>
+        <rect>(0.2,0,0.6,0.1)</rect>
+      </damageData>
+    </graphicData>
+    <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+    <defaultPlacingRot>South</defaultPlacingRot>
+    <costList>
+      <Steel>50</Steel>
+      <ComponentIndustrial>1</ComponentIndustrial>
+    </costList>
+    <constructEffect>ConstructMetal</constructEffect>
+    <statBases>
+      <WorkToBuild>1500</WorkToBuild>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Mass>10</Mass>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <constructionSkillPrerequisite>3</constructionSkillPrerequisite>
+    <rotatable>true</rotatable>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <shortCircuitInRain>true</shortCircuitInRain>
+        <basePowerConsumption>100</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Glower">
+        <glowRadius>2</glowRadius>
+        <glowColor>(255,150,100,50)</glowColor>
+      </li>
+      <li Class="CompProperties_HeatPusher">
+        <compClass>CompHeatPusherPowered</compClass>
+        <heatPerSecond>0.5</heatPerSecond>
+      </li>
+      <li Class="EggIncubator.CompProperties_SecondLayer">
+        <graphicData>
+          <texPath>Lid/Lid</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <shaderType>Transparent</shaderType>
+          <drawSize>(2,2)</drawSize>
+        </graphicData>
+        <altitudeLayer>MoteOverhead</altitudeLayer>
+      </li>
+    </comps>
+    <researchPrerequisites>
+      <li>Electricity</li>
+    </researchPrerequisites>
+  </ThingDef>
+</Defs>
