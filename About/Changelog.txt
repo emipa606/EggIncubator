@@ -1,5 +1,8 @@
 # Changelog for EggIncubator
 
+1.0.4.0 - Removed debug-comment spamming messages, sorry about that
+
+
 1.0.3.0 - Mod updated for 1.3 and passed autotests
 
 

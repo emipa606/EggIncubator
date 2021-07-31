@@ -41,7 +41,7 @@ namespace EggIncubator
         public override void PostDraw()
         {
             base.PostDraw();
-            Log.Message($"Drawing cover for {parent}");
+            //Log.Message($"Drawing cover for {parent}");
             Graphic.Draw(GenThing.TrueCenter(parent.Position, parent.Rotation, parent.def.size, Props.Altitude),
                 parent.Rotation, parent);
         }
