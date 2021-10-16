@@ -1,5 +1,8 @@
 # Changelog for EggIncubator
 
+1.0.5.0 - Fixed the egg hatch-info for eggs in insdustrial hatcher. If the improved hatch-setting is turned on the card should now show the correct time left until hatching.
+
+
 1.0.4.0 - Removed debug-comment spamming messages, sorry about that
 
 

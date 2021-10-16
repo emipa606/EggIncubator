@@ -1,6 +1,6 @@
 # EggIncubator
 
-![Image](https://i.imgur.com/WAEzk68.png)
+![Image](https://i.imgur.com/buuPQel.png)
 
 
 Incubators for fertilized eggs. Keeps the eggs the right temperature and can optionally speed up incubation-time.
@@ -18,23 +18,14 @@ Idea by: Psyra
 Graphics by: Delta
 Chinese translation:HawnHan
 
-[table]
-	[tr]
-		[td]https://invite.gg/Mlie]![Image](https://i.imgur.com/zdzzBrc.png)
-[/td]
-		[td]https://github.com/emipa606/EggIncubator]![Image](https://i.imgur.com/kTkpTOE.png)
-[/td]
-	[/tr]
-[/table]
-
-![Image](https://i.imgur.com/pgjQLXV.png)
+![Image](https://i.imgur.com/O0IIlYj.png)
 
 Since modding is just a hobby for me I expect no donations to keep modding. If you still want to show your support you can gift me anything from my https://store.steampowered.com/wishlist/id/Mlie]Wishlist or buy me a cup of tea.
 
 https://ko-fi.com/G2G55DDYD]![Image](https://i.ibb.co/VWJJb3w/Support-Me-dark-2x.png)
 
 
-![Image](https://i.imgur.com/Rs6T6cr.png)
+![Image](https://i.imgur.com/PwoNOj4.png)
 
 
 
