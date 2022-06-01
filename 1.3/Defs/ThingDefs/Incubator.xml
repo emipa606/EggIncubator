@@ -28,6 +28,7 @@
         <filter>
           <categories>
             <li>EggsFertilized</li>
+            <li MayRequire="onyxae.dragonsdescent">EggsDragon</li>
           </categories>
           <specialFiltersToDisallow>
             <li>AllowRotten</li>
@@ -39,6 +40,7 @@
         <filter>
           <categories>
             <li>EggsFertilized</li>
+            <li MayRequire="onyxae.dragonsdescent">EggsDragon</li>
           </categories>
         </filter>
       </defaultStorageSettings>
