@@ -1,24 +1,23 @@
 ﻿using HarmonyLib;
 using RimWorld;
 
-namespace EggIncubator
+namespace EggIncubator;
+
+[HarmonyPatch(typeof(CompHatcher), "CompTick")]
+public static class CompHatcher_CompTick
 {
-    [HarmonyPatch(typeof(CompHatcher), "CompTick")]
-    public static class CompHatcher_CompTick
+    private static bool skipPostfix;
+
+    public static void Postfix(ref CompHatcher __instance)
     {
-        private static bool skipPostfix;
-
-        public static void Postfix(ref CompHatcher __instance)
+        if (skipPostfix || !EggIncubatorMod.instance.Settings.IncreaseIncubationSpeed ||
+            !EggIncubator.IsInIncubator(__instance.parent, true))
         {
-            if (skipPostfix || !EggIncubatorMod.instance.Settings.IncreaseIncubationSpeed ||
-                !EggIncubator.IsInIncubator(__instance.parent, true))
-            {
-                return;
-            }
-
-            skipPostfix = true;
-            __instance.CompTick();
-            skipPostfix = false;
+            return;
         }
+
+        skipPostfix = true;
+        __instance.CompTick();
+        skipPostfix = false;
     }
 }

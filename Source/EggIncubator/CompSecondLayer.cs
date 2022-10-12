@@ -20,7 +20,7 @@ internal class CompSecondLayer : ThingComp
 
             if (Props.graphicData == null)
             {
-                Log.ErrorOnce(parent.def + " has no SecondLayer graphicData but we are trying to access it.",
+                Log.ErrorOnce($"{parent.def} has no SecondLayer graphicData but we are trying to access it.",
                     764532);
                 return BaseContent.BadGraphic;
             }

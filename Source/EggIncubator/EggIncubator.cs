@@ -3,40 +3,39 @@ using HarmonyLib;
 using RimWorld;
 using Verse;
 
-namespace EggIncubator
+namespace EggIncubator;
+
+[StaticConstructorOnStartup]
+public static class EggIncubator
 {
-    [StaticConstructorOnStartup]
-    public static class EggIncubator
+    public static readonly ThingCategoryDef FertilizedCategoryDef;
+
+    static EggIncubator()
     {
-        public static readonly ThingCategoryDef FertilizedCategoryDef;
+        var harmony = new Harmony("Mlie.EggIncubator");
+        harmony.PatchAll(Assembly.GetExecutingAssembly());
+        FertilizedCategoryDef = ThingCategoryDef.Named("EggsFertilized");
+    }
 
-        static EggIncubator()
+    public static bool IsInIncubator(Thing thing, bool Advanced = false)
+    {
+        if (thing?.IsInAnyStorage() == false)
         {
-            var harmony = new Harmony("Mlie.EggIncubator");
-            harmony.PatchAll(Assembly.GetExecutingAssembly());
-            FertilizedCategoryDef = ThingCategoryDef.Named("EggsFertilized");
+            return false;
         }
 
-        public static bool IsInIncubator(Thing thing, bool Advanced = false)
+        var storage = thing?.PositionHeld.GetFirstBuilding(thing.Map);
+        if (storage == null)
         {
-            if (thing?.IsInAnyStorage() == false)
-            {
-                return false;
-            }
-
-            var storage = thing?.PositionHeld.GetFirstBuilding(thing.Map);
-            if (storage == null)
-            {
-                return false;
-            }
-
-            return storage.def.defName switch
-            {
-                "Basic_EggIncubator" when Advanced => false,
-                "Basic_EggIncubator" => storage.TryGetComp<CompRefuelable>()?.HasFuel == true,
-                "Normal_EggIncubator" => storage.TryGetComp<CompPowerTrader>()?.PowerOn == true,
-                _ => false
-            };
+            return false;
         }
+
+        return storage.def.defName switch
+        {
+            "Basic_EggIncubator" when Advanced => false,
+            "Basic_EggIncubator" => storage.TryGetComp<CompRefuelable>()?.HasFuel == true,
+            "Normal_EggIncubator" => storage.TryGetComp<CompPowerTrader>()?.PowerOn == true,
+            _ => false
+        };
     }
 }

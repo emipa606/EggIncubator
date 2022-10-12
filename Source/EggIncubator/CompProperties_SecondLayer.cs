@@ -1,18 +1,17 @@
 using Verse;
 
-namespace EggIncubator
+namespace EggIncubator;
+
+internal class CompProperties_SecondLayer : CompProperties
 {
-    internal class CompProperties_SecondLayer : CompProperties
+    private AltitudeLayer altitudeLayer;
+
+    public GraphicData graphicData;
+
+    public CompProperties_SecondLayer()
     {
-        private AltitudeLayer altitudeLayer;
-
-        public GraphicData graphicData;
-
-        public CompProperties_SecondLayer()
-        {
-            compClass = typeof(CompSecondLayer);
-        }
-
-        public float Altitude => altitudeLayer.AltitudeFor();
+        compClass = typeof(CompSecondLayer);
     }
+
+    public float Altitude => altitudeLayer.AltitudeFor();
 }
