@@ -12,8 +12,7 @@ public static class EggIncubator
 
     static EggIncubator()
     {
-        var harmony = new Harmony("Mlie.EggIncubator");
-        harmony.PatchAll(Assembly.GetExecutingAssembly());
+        new Harmony("Mlie.EggIncubator").PatchAll(Assembly.GetExecutingAssembly());
         FertilizedCategoryDef = ThingCategoryDef.Named("EggsFertilized");
     }
 

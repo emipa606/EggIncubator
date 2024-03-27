@@ -3,7 +3,7 @@ using RimWorld;
 
 namespace EggIncubator;
 
-[HarmonyPatch(typeof(CompHatcher), "CompTick")]
+[HarmonyPatch(typeof(CompHatcher), nameof(CompHatcher.CompTick))]
 public static class CompHatcher_CompTick
 {
     private static bool skipPostfix;

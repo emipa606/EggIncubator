@@ -18,7 +18,7 @@ internal class EggIncubatorMod : Mod
     /// <summary>
     ///     The private settings
     /// </summary>
-    private EggIncubatorModSettings settings;
+    public readonly EggIncubatorModSettings Settings;
 
     /// <summary>
     ///     Constructor
@@ -29,30 +29,10 @@ internal class EggIncubatorMod : Mod
     {
         instance = this;
         currentVersion =
-            VersionFromManifest.GetVersionFromModMetaData(
-                ModLister.GetActiveModWithIdentifier("Mlie.EggIncubator"));
+            VersionFromManifest.GetVersionFromModMetaData(content.ModMetaData);
+        Settings = GetSettings<EggIncubatorModSettings>();
     }
 
-
-    /// <summary>
-    ///     The instance-settings for the mod
-    /// </summary>
-    internal EggIncubatorModSettings Settings
-    {
-        get
-        {
-            if (settings != null)
-            {
-                return settings;
-            }
-
-            settings = GetSettings<EggIncubatorModSettings>();
-
-            return settings;
-        }
-
-        set => settings = value;
-    }
 
     /// <summary>
     ///     The settings-window

@@ -4,7 +4,7 @@ using RimWorld;
 
 namespace EggIncubator;
 
-[HarmonyPatch(typeof(CompHatcher), "CompInspectStringExtra")]
+[HarmonyPatch(typeof(CompHatcher), nameof(CompHatcher.CompInspectStringExtra))]
 public static class CompHatcher_CompInspectStringExtra
 {
     public static void Postfix(ref CompHatcher __instance, ref string __result)
