@@ -10,7 +10,7 @@ internal class EggIncubatorMod : Mod
     /// <summary>
     ///     The instance of the settings to be read by the mod
     /// </summary>
-    public static EggIncubatorMod instance;
+    public static EggIncubatorMod Instance;
 
     private static string currentVersion;
 
@@ -27,7 +27,7 @@ internal class EggIncubatorMod : Mod
     public EggIncubatorMod(ModContentPack content)
         : base(content)
     {
-        instance = this;
+        Instance = this;
         currentVersion =
             VersionFromManifest.GetVersionFromModMetaData(content.ModMetaData);
         Settings = GetSettings<EggIncubatorModSettings>();
@@ -41,18 +41,18 @@ internal class EggIncubatorMod : Mod
     public override void DoSettingsWindowContents(Rect rect)
     {
         base.DoSettingsWindowContents(rect);
-        var listing_Standard = new Listing_Standard();
-        listing_Standard.Begin(rect);
-        listing_Standard.CheckboxLabeled("EI.increasespeed.label".Translate(), ref Settings.IncreaseIncubationSpeed,
+        var listingStandard = new Listing_Standard();
+        listingStandard.Begin(rect);
+        listingStandard.CheckboxLabeled("EI.increasespeed.label".Translate(), ref Settings.IncreaseIncubationSpeed,
             "EI.increasespeed.tooltip".Translate());
         if (currentVersion != null)
         {
             GUI.contentColor = Color.gray;
-            listing_Standard.Label("EI.version.label".Translate(currentVersion));
+            listingStandard.Label("EI.version.label".Translate(currentVersion));
             GUI.contentColor = Color.white;
         }
 
-        listing_Standard.End();
+        listingStandard.End();
     }
 
 

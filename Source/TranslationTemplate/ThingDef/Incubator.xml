@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: basic egg incubator -->
+  <Basic_EggIncubator.label>basic egg incubator</Basic_EggIncubator.label>
+  <!-- EN: Will keep the eggs at the right temperature -->
+  <Basic_EggIncubator.description>Will keep the eggs at the right temperature</Basic_EggIncubator.description>
+  <!-- EN: industrial egg incubator -->
+  <Normal_EggIncubator.label>industrial egg incubator</Normal_EggIncubator.label>
+  <!-- EN: Will keep the eggs at the right temperature -->
+  <Normal_EggIncubator.description>Will keep the eggs at the right temperature</Normal_EggIncubator.description>
+</LanguageData>

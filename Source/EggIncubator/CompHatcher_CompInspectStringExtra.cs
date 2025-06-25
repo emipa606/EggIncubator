@@ -9,7 +9,7 @@ public static class CompHatcher_CompInspectStringExtra
 {
     public static void Postfix(ref CompHatcher __instance, ref string __result)
     {
-        if (!EggIncubatorMod.instance.Settings.IncreaseIncubationSpeed ||
+        if (!EggIncubatorMod.Instance.Settings.IncreaseIncubationSpeed ||
             !EggIncubator.IsInIncubator(__instance.parent, true))
         {
             return;

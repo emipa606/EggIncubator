@@ -1,0 +1,29 @@
+ManifestFileVersion: 0
+CRC: 649261509
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: fc5b63c5cd9e87ae89304a52f74ef565
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 2612ac43db082a73502ee80f2eceb73f
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: fc5b63c5cd9e87ae89304a52f74ef565
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Data/Mlie.EggIncubator/Textures/Lid/Lid_north.png
+- Assets/Data/Mlie.EggIncubator/Textures/BasicIncubator.png
+- Assets/Data/Mlie.EggIncubator/Textures/Incubator/Incubator_east.png
+- Assets/Data/Mlie.EggIncubator/Textures/Incubator/Incubator_north.png
+- Assets/Data/Mlie.EggIncubator/Textures/BasicIncubator_UI.png
+- Assets/Data/Mlie.EggIncubator/Textures/Incubator/Incubator_south.png
+- Assets/Data/Mlie.EggIncubator/Textures/Lid/Lid_south.png
+- Assets/Data/Mlie.EggIncubator/Textures/Incubator_UI.png
+- Assets/Data/Mlie.EggIncubator/Textures/Lid/Lid_east.png
+- Assets/Data/Mlie.EggIncubator/Textures/BasicIncubatorLid.png
+Dependencies: []

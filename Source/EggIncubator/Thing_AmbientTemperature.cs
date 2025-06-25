@@ -4,7 +4,7 @@ using Verse;
 
 namespace EggIncubator;
 
-[HarmonyPatch(typeof(Thing), "AmbientTemperature", MethodType.Getter)]
+[HarmonyPatch(typeof(Thing), nameof(Thing.AmbientTemperature), MethodType.Getter)]
 public static class Thing_AmbientTemperature
 {
     public static bool Prefix(ref Thing __instance, ref float __result)

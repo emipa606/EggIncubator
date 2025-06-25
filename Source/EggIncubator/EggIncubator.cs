@@ -16,7 +16,7 @@ public static class EggIncubator
         FertilizedCategoryDef = ThingCategoryDef.Named("EggsFertilized");
     }
 
-    public static bool IsInIncubator(Thing thing, bool Advanced = false)
+    public static bool IsInIncubator(Thing thing, bool advanced = false)
     {
         if (thing?.IsInAnyStorage() == false)
         {
@@ -31,7 +31,7 @@ public static class EggIncubator
 
         return storage.def.defName switch
         {
-            "Basic_EggIncubator" when Advanced => false,
+            "Basic_EggIncubator" when advanced => false,
             "Basic_EggIncubator" => storage.TryGetComp<CompRefuelable>()?.HasFuel == true,
             "Normal_EggIncubator" => storage.TryGetComp<CompPowerTrader>()?.PowerOn == true,
             _ => false

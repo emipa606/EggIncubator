@@ -10,7 +10,7 @@ public static class CompHatcher_CompTick
 
     public static void Postfix(ref CompHatcher __instance)
     {
-        if (skipPostfix || !EggIncubatorMod.instance.Settings.IncreaseIncubationSpeed ||
+        if (skipPostfix || !EggIncubatorMod.Instance.Settings.IncreaseIncubationSpeed ||
             !EggIncubator.IsInIncubator(__instance.parent, true))
         {
             return;
